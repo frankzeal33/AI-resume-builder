@@ -9,6 +9,8 @@ import Dashboard from './dashboard/Dashboard.jsx'
 import { ClerkProvider } from '@clerk/clerk-react'
 import EditResume from './dashboard/resume/edit/index.jsx'
 import ViewResume from './view-resume/view/ViewResume.jsx'
+import Signup from './auth/Signup.jsx'
+import { ThemeProvider } from './context/theme-provider.jsx'
 
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -36,6 +38,10 @@ const router = createBrowserRouter([
     element: <Signin/>
   },
   {
+    path:'/auth/sign-up',
+    element: <Signup/>
+  },
+  {
     path:'/my-resume/:resumeId/view',
     element: <ViewResume/>
   }
@@ -43,8 +49,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
-        <RouterProvider router={router} />
-    </ClerkProvider>
+    <ThemeProvider defaultTheme="light" storageKey="resume-app-theme">
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+          <RouterProvider router={router} />
+      </ClerkProvider>
+    </ThemeProvider>
   </StrictMode>,
 )

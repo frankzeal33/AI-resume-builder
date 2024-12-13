@@ -52,7 +52,7 @@ const ThemeColor = () => {
             <h2 className='mb-2 text-sm font-bold'>Select Theme Color</h2>
             <div className='grid grid-cols-5 gap-3'>
                 {colors.map((item, index) => (
-                    <div onClick={() => onColorSelect(item)} className={`h-5 w-5 rounded-full cursor-pointer border hover:border-black ${selectedColor == item && 'border border-black'}`} style={{background: item}}></div>
+                    <div key={index} onClick={() => onColorSelect(item)} className={`h-5 w-5 rounded-full cursor-pointer border hover:border-black ${selectedColor == item && 'border border-black'}`} style={{background: item}}></div>
                 ))}
             </div>
         </PopoverContent>

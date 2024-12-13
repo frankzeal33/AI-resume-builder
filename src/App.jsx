@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { Navigate, Outlet } from 'react-router-dom'
 import { useUser } from '@clerk/clerk-react'
@@ -7,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
   const {user, isLoaded, isSignedIn} = useUser()
 
   if(!isSignedIn && isLoaded){

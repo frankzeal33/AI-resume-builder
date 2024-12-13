@@ -49,7 +49,7 @@ const AddResume = () => {
     }
   return (
     <div>
-        <div onClick={() => setOpenDialog(true)} className="p-14 py-24 border items-center flex justify-center bg-secondary rounded h-[280px] hover:scale-105 transition-all hover:shadow-md cursor-pointer border-dashed">
+        <div onClick={() => setOpenDialog(true)} className="p-14 py-24 border items-center flex justify-center bg-secondary rounded h-[350px] hover:scale-105 transition-all hover:shadow-md cursor-pointer border-dashed">
             <PlusSquare/>
         </div>
         <Dialog open={openDialog}>

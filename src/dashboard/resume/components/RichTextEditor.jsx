@@ -24,7 +24,7 @@ import {
 import { AIChatSession } from './../../../../service/AIModel'
 
 
-const PROMPT = "position title: {positionTitle}, depends on position title give me 5-7 bullet points for my experience in resume, give  me result in html format"
+const PROMPT = "position title: {positionTitle}, depends on position title give me 5-7 bullet points for my experience in resume. Do not include the job title itself in the output. Provide only the bullet points inside an unordered list tag in HTML format."
 const RichTextEditor = ({onRichTextEditorChange, index, defaultValue}) => {
 
     const [value, setValue] = useState(defaultValue);

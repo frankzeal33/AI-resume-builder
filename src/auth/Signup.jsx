@@ -1,16 +1,16 @@
 import Header from '@/components/custom/Header'
-import { SignIn } from '@clerk/clerk-react'
+import { SignUp } from '@clerk/clerk-react'
 import React from 'react'
 
-const Signin = () => {
+const Signup = () => {
   return (
     <div>
       <Header/>
       <div className='flex items-center justify-center p-4 min-h-[60vh] pt-24'>
-        <SignIn/>
+        <SignUp/>
       </div>
     </div>
   )
 }
 
-export default Signin
+export default Signup

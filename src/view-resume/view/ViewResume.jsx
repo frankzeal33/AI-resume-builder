@@ -32,7 +32,7 @@ const ViewResume = () => {
         <div id='no-print'>
             <Header/>
 
-            <div className='pt-14'>
+            <div className='pt-24'>
                 <h2 className='text-center text-2xl font-medium'>Congrats! Your Ultimate AI generated Resume is Ready</h2>
                 <p className='text-center text-gray-400'>Now you can download or share your unique resume Url to friends and family</p>
                 <div className='flex justify-between px-44 my-10'>

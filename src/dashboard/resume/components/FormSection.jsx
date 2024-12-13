@@ -16,7 +16,7 @@ const FormSection = () => {
   const {resumeId} = useParams()
 
   return (
-    <div  className='p-5 shadow-lg rounded-lg border-t-primary border-t-4 mt-10'>
+    <div  className='p-5 shadow-lg rounded-lg border-t-primary border-t-4 mt-10 border'>
       <div className='flex justify-between items-center mb-3'>
         <div className='flex gap-2'>
           <Link to={"/dashboard"}><Button className="flex gap-2" size="sm"> <Home/> </Button></Link>

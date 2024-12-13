@@ -5,8 +5,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import {
@@ -18,7 +16,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import GlobalApi from './../../../service/GlobalApi'
 import { toast } from '@/hooks/use-toast'
@@ -54,8 +51,7 @@ const ResumeCardItem = ({resume, refreshData}) => {
           <DropdownMenuTrigger>
             <MoreVertical className='h-4 w-4 cursor-pointer'/>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuSeparator />
+          <DropdownMenuContent align="end">
             <DropdownMenuItem onClick={() => navigation(`/dashboard/resume/${resume.documentId}/edit`)}>Edit</DropdownMenuItem>
             <DropdownMenuItem onClick={() => navigation(`/my-resume/${resume.documentId}/view`)}>View</DropdownMenuItem>
             <DropdownMenuItem onClick={() => navigation(`/my-resume/${resume.documentId}/view`)}>Download</DropdownMenuItem>
