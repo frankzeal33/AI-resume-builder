@@ -32,7 +32,7 @@ const Home = () => {
                   resume builder
                 </p>
               </h1>
-              <p className=" block text-xl mt-3 font-medium">
+              <p className=" block text-xl mt-3 font-medium px-4">
                 Build a professional resume with our free multiple custom templete builder and share the shareable link with people.
               </p>
               <br />
