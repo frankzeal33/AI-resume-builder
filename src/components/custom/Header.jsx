@@ -29,10 +29,7 @@ const Header = () => {
         <div className='flex items-center gap-2'>
           <Theme/>
           <Link to={'/auth/sign-in'}>
-            <Button variant="outline" className="text-base font-medium">Sign In</Button>
-          </Link>
-          <Link to={'/auth/sign-up'}>
-            <Button className="text-base font-medium">Sign Up</Button>
+            <Button className="text-base font-medium">Sign In</Button>
           </Link>
         </div>
       }
