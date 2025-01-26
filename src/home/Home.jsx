@@ -1,10 +1,12 @@
 import Footer from '@/components/custom/Footer';
 import Header from '@/components/custom/Header'
 import { Button } from "@/components/ui/button";
+import { useUser } from '@clerk/clerk-react';
 import { ChevronRight, Video } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const {user, isSignedIn} = useUser()
   return (
     <div>
       <Header/>
@@ -35,11 +37,19 @@ const Home = () => {
               </p>
               <br />
               <div className="flex items-center gap-2">
-                <Link to={'/auth/sign-up'}>
-                  <Button className="h-12 text-base font-medium min-w-32">
-                    Get Started
-                  </Button>
-                </Link>
+                {isSignedIn ? (
+                  <Link to={'/dashboard'}>
+                    <Button className="h-12 text-base font-medium min-w-32">
+                      Dashboard
+                    </Button>
+                  </Link>
+                ) : (
+                  <Link to={'/auth/sign-up'}>
+                    <Button className="h-12 text-base font-medium min-w-32">
+                      Get Started
+                    </Button>
+                  </Link>
+                )}
                 <Button
                   variant="outline"
                   className="h-12  border-primary text-primary text-base font-medium min-w-32"
