@@ -22,7 +22,7 @@ const Header = () => {
           <Theme/>
           <Link to={'/dashboard'}>
             <Button variant="outline" className="dark:bg-primary dark:border-none hidden md:block">Dashboard</Button>
-            <Button variant="outline" className="dark:bg-primary dark:border-none md:hidden"><LayoutDashboard/></Button>
+            <Button variant="outline" className="dark:bg-primary dark:border-none md:hidden"><LayoutDashboard size={28}/></Button>
           </Link>
           <UserButton/>
         </div> :
