@@ -3,7 +3,7 @@ import { Button } from '../ui/button'
 import { Link } from 'react-router-dom'
 import { UserButton, useUser } from '@clerk/clerk-react'
 import Theme from './Theme'
-import { SquareDashedBottomCodeIcon } from 'lucide-react'
+import { LayoutDashboard } from 'lucide-react'
 
 const Header = () => {
   const {user, isSignedIn} = useUser()
@@ -22,7 +22,7 @@ const Header = () => {
           <Theme/>
           <Link to={'/dashboard'}>
             <Button variant="outline" className="dark:bg-primary dark:border-none hidden md:block">Dashboard</Button>
-            <Button variant="outline" className="dark:bg-primary dark:border-none md:hidden"><SquareDashedBottomCodeIcon/></Button>
+            <Button variant="outline" className="dark:bg-primary dark:border-none md:hidden"><LayoutDashboard/></Button>
           </Link>
           <UserButton/>
         </div> :
